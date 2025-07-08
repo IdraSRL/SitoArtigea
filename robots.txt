@@ -1,0 +1,28 @@
+User-Agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.artigea.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl-delay for courtesy
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Bingbot
+Allow: /
+
+# Block access to specific file types
+User-Agent: *
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
