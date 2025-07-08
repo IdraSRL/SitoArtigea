@@ -305,10 +305,11 @@ a:focus {
 /* Hero Section */
 .hero {
     padding: 120px 0 var(--spacing-20);
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 70%, var(--color-accent) 100%);
     position: relative;
     overflow: hidden;
     color: white;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1);
 }
 
 .hero::before {
@@ -370,9 +371,10 @@ a:focus {
 .hero__image img {
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    border: 2px solid var(--color-border);
     border-radius: 16px;
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Section Headers */
@@ -604,7 +606,7 @@ a:focus {
 /* Contact Section */
 .contact {
     padding: var(--spacing-20) 0;
-    background: var(--color-secondary-subtle);
+    background: linear-gradient(135deg, var(--color-secondary-subtle) 0%, var(--color-primary-subtle) 100%);
 }
 
 .contact__content {
@@ -631,13 +633,15 @@ a:focus {
     padding: var(--spacing-6);
     background: var(--color-surface);
     border-radius: 12px;
-    border: 1px solid var(--color-border);
+    border: 2px solid var(--color-border);
     transition: transform var(--transition-normal);
+    box-shadow: var(--shadow-sm);
 }
 
 .contact__item:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
 }
 
 .contact__icon {
@@ -668,6 +672,7 @@ a:focus {
 .contact__map {
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: var(--shadow-sm);
     box-shadow: var(--shadow-lg);
 }
 
@@ -677,10 +682,21 @@ a:focus {
 
 /* Footer */
 .footer {
-    background: var(--color-primary-dark);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-secondary-dark) 100%);
     padding: var(--spacing-16) 0 var(--spacing-8);
     border-top: 1px solid var(--color-border);
     color: white;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footergrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23footergrid)"/></svg>');
 }
 
 .footer__content {
@@ -700,8 +716,9 @@ a:focus {
 }
 
 .footer__logo {
-    height: 80px;
+    height: 120px;
     width: auto;
+    margin-bottom: var(--spacing-4);
 }
 
 .footer__brand p {
@@ -928,6 +945,7 @@ a:focus {
     justify-content: center;
     font-size: var(--font-size-lg);
     transition: all var(--transition-normal);
+    box-shadow: var(--shadow-sm);
     transform: translateY(100px);
     opacity: 0;
     box-shadow: var(--shadow-lg);
@@ -941,5 +959,5 @@ a:focus {
 .back-to-top:hover {
     background: var(--color-primary-dark);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 20px 40px -12px rgba(37, 150, 190, 0.25);
 }
