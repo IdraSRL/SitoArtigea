@@ -26,11 +26,11 @@
     --color-secondary-subtle: #e8f4f8; /* Blu molto chiaro per sfondi */
     
     /* Neutral Colors - Palette Equilibrata */
-    --color-dark: #f8f9fa;           /* Grigio molto chiaro per sfondo */
-    --color-dark-lighter: #e9ecef;   /* Grigio chiaro per sezioni alternate */
+    --color-dark: #f1f3f4;           /* Grigio più scuro per sfondo principale */
+    --color-dark-lighter: #e8eaed;   /* Grigio medio per sezioni alternate */
     --color-text: #2d3748;           /* Grigio scuro per testo principale */
     --color-text-muted: #718096;     /* Grigio medio per testo secondario */
-    --color-border: #e2e8f0;         /* Grigio chiaro per bordi */
+    --color-border: #dadce0;         /* Grigio più definito per bordi */
     --color-surface: #ffffff;        /* Bianco per card e superfici */
     
     /* Typography */
