@@ -26,8 +26,8 @@
     --color-secondary-subtle: #e8f4f8; /* Blu molto chiaro per sfondi */
     
     /* Neutral Colors - Palette Equilibrata */
-    --color-dark: #fafbfc;           /* Grigio chiarissimo per sfondo */
-    --color-dark-lighter: #f1f3f5;   /* Grigio chiaro per sezioni alternate */
+    --color-dark: #f8f9fa;           /* Grigio molto chiaro per sfondo */
+    --color-dark-lighter: #e9ecef;   /* Grigio chiaro per sezioni alternate */
     --color-text: #2d3748;           /* Grigio scuro per testo principale */
     --color-text-muted: #718096;     /* Grigio medio per testo secondario */
     --color-border: #e2e8f0;         /* Grigio chiaro per bordi */
@@ -182,7 +182,7 @@ a:focus {
 }
 
 .nav__logo {
-    height: 40px;
+    height: 60px;
     width: auto;
 }
 
@@ -700,8 +700,8 @@ a:focus {
 }
 
 .footer__logo {
-    height:200px;
-
+    height: 80px;
+    width: auto;
 }
 
 .footer__brand p {

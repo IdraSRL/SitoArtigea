@@ -64,29 +64,25 @@ Sistema a 8px con variabili CSS personalizzate per consistenza.
 
 ### Nuovo Articolo Blog
 
-1. **Copia il template**:
-   ```bash
-   cp blog/template.html blog/nome-articolo.html
-   ```
+1. **Usa il template esistente**:
+   - Copia `blog/template.html` e rinominalo con il nome dell'articolo
+   - Esempio: `blog/come-pulire-vetri-senza-aloni.html`
 
-2. **Sostituisci i placeholder**:
-   - `{{title}}` - Titolo dell'articolo
-   - `{{description}}` - Meta description per SEO
-   - `{{keywords}}` - Keywords separate da virgola
-   - `{{slug}}` - URL-friendly slug dell'articolo
-   - `{{published_date}}` - Data ISO (YYYY-MM-DD)
-   - `{{published_date_formatted}}` - Data formattata (es. "15 Marzo 2024")
-   - `{{category}}` - Categoria dell'articolo
-   - `{{reading_time}}` - Tempo di lettura stimato
-   - `{{excerpt}}` - Riassunto dell'articolo
+2. **Personalizza i metadati**:
+   - Aggiorna title, description, keywords nel `<head>`
+   - Modifica il JSON-LD schema con i dati dell'articolo
+   - Aggiorna breadcrumb e meta dell'articolo
 
-3. **Aggiungi il contenuto** nella sezione CONTENT PLACEHOLDER
+3. **Scrivi il contenuto**:
+   - Sostituisci il contenuto nella sezione `.article-body`
+   - Usa la struttura HTML esistente come guida
+   - Mantieni la formattazione con h2, h3, p, ul, blockquote
 
-4. **Aggiungi le immagini**:
-   - Cover: `assets/blog/[slug]-cover.jpg`
-   - OG Image: `assets/blog/[slug]-og.jpg`
+4. **Aggiorna i link**:
+   - Aggiungi il link nell'indice del blog (`blog/index.html`)
+   - Aggiorna la homepage se necessario
+   - Aggiorna `sitemap.xml`
 
-5. **Aggiorna sitemap.xml** con il nuovo URL
 
 ### Aggiornare Servizi
 

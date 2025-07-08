@@ -53,7 +53,7 @@
         <nav class="nav container">
             <div class="nav__brand">
                 <a href="../index.html">
-                    <img src="../assets/logo-artigea.svg" alt="Logo Artigea s.r.l." class="nav__logo">
+                    <img src="../img/Senza.png" alt="Logo Artigea s.r.l." class="nav__logo">
                 </a>
             </div>
             <ul class="nav__menu" id="nav-menu">
@@ -306,7 +306,7 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <img src="../assets/logo-artigea.svg" alt="Logo Artigea s.r.l." class="footer__logo">
+                    <img src="../img/LogoCompleto.png" alt="Logo Artigea s.r.l." class="footer__logo">
                     <p>Servizi di pulizia professionali a Pisa e provincia</p>
                 </div>
                 <div class="footer__links">
@@ -341,7 +341,8 @@
             <div class="footer__bottom">
                 <div class="footer__info">
                     <p><strong>Artigea s.r.l.</strong> - P.IVA/C.F. 02522330541</p>
-                    <p>Sede legale: Via Polidori 14, 56031 Bientina (PI) - Tel: <a href="tel:+393462319824">346 231 9824</a></p>
+                    <p>Sede legale: Via Polidori 14, 56032 Bientina (PI) - Sede operativa: Via Amedeo Modigliani 32, 56010 Vicopisano (PI)</p>
+                    <p>Tel: <a href="tel:+393462319824">346 231 9824</a> - Email: <a href="mailto:info@artigea.it">info@artigea.it</a></p>
                 </div>
                 <div class="footer__badges">
                     <span class="gdpr-badge">🔒 GDPR Compliant</span>
@@ -367,208 +368,5 @@
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script src="../js/cookie-consent.js"></script>
-
-    <style>
-        /* Blog Index Specific Styles */
-        .blog-index {
-            padding-top: 80px;
-        }
-
-        .blog-hero {
-            background: var(--color-surface);
-            padding: var(--spacing-16) 0;
-            text-align: center;
-        }
-
-        .blog-hero__title {
-            font-size: var(--font-size-4xl);
-            margin-bottom: var(--spacing-4);
-            color: var(--color-primary);
-        }
-
-        .blog-hero__description {
-            font-size: var(--font-size-lg);
-            color: var(--color-text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Featured Article */
-        .featured-article {
-            padding: var(--spacing-16) 0;
-        }
-
-        .featured-card {
-            display: grid;
-            gap: var(--spacing-8);
-            background: var(--color-surface);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--color-border);
-        }
-
-        @media (min-width: 1024px) {
-            .featured-card {
-                grid-template-columns: 1fr 1fr;
-                gap: 0;
-            }
-        }
-
-        .featured-card__image img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        @media (min-width: 1024px) {
-            .featured-card__image img {
-                height: 100%;
-            }
-        }
-
-        .featured-card__content {
-            padding: var(--spacing-8);
-        }
-
-        .featured-card__category {
-            display: inline-block;
-            padding: var(--spacing-1) var(--spacing-3);
-            background: var(--color-primary);
-            color: white;
-            font-size: var(--font-size-xs);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: 12px;
-            margin-bottom: var(--spacing-4);
-        }
-
-        .featured-card__title {
-            font-size: var(--font-size-2xl);
-            margin-bottom: var(--spacing-4);
-        }
-
-        .featured-card__title a {
-            color: var(--color-text);
-            text-decoration: none;
-        }
-
-        .featured-card__title a:hover {
-            color: var(--color-primary);
-        }
-
-        .featured-card__excerpt {
-            color: var(--color-text-muted);
-            line-height: 1.6;
-            margin-bottom: var(--spacing-6);
-        }
-
-        .featured-card__meta {
-            display: flex;
-            gap: var(--spacing-4);
-            margin-bottom: var(--spacing-6);
-            font-size: var(--font-size-sm);
-            color: var(--color-text-muted);
-        }
-
-        /* Categories */
-        .blog-categories {
-            padding: var(--spacing-16) 0;
-            background: var(--color-dark-lighter);
-        }
-
-        .categories-grid {
-            display: grid;
-            gap: var(--spacing-6);
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        .category-card {
-            background: var(--color-surface);
-            padding: var(--spacing-6);
-            border-radius: 12px;
-            border: 1px solid var(--color-border);
-            text-align: center;
-            transition: transform var(--transition-normal);
-        }
-
-        .category-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .category-card__icon {
-            font-size: 3rem;
-            margin-bottom: var(--spacing-4);
-        }
-
-        .category-card__title {
-            color: var(--color-primary);
-            margin-bottom: var(--spacing-2);
-        }
-
-        .category-card__description {
-            color: var(--color-text-muted);
-            font-size: var(--font-size-sm);
-            margin-bottom: var(--spacing-3);
-        }
-
-        .category-card__count {
-            color: var(--color-text-muted);
-            font-size: var(--font-size-xs);
-            font-weight: 600;
-        }
-
-        /* Recent Articles */
-        .recent-articles {
-            padding: var(--spacing-16) 0;
-            background: var(--color-surface);
-        }
-
-        /* CTA Section */
-        .blog-cta {
-            padding: var(--spacing-16) 0;
-            background: var(--color-primary-subtle);
-        }
-
-        .cta-card {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-            padding: var(--spacing-12);
-            border-radius: 16px;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-card__title {
-            font-size: var(--font-size-2xl);
-            margin-bottom: var(--spacing-4);
-            color: white;
-        }
-
-        .cta-card__description {
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--spacing-8);
-            opacity: 0.9;
-        }
-
-        .cta-card__actions {
-            display: flex;
-            gap: var(--spacing-4);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-card .btn--outline {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .cta-card .btn--outline:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: white;
-            transform: translateY(-2px);
-        }
-    </style>
 </body>
 </html>

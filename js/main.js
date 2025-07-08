@@ -72,17 +72,17 @@ class ArtigeaWebsite {
         // Add animation classes to elements
         document.querySelectorAll('.service-card').forEach((card, index) => {
             card.classList.add('fade-in');
-            card.style.transitionDelay = `${index * 100}ms`;
+            card.style.transitionDelay = `${index * 150}ms`;
         });
 
         document.querySelectorAll('.blog-card').forEach((card, index) => {
             card.classList.add('fade-in');
-            card.style.transitionDelay = `${index * 150}ms`;
+            card.style.transitionDelay = `${index * 100}ms`;
         });
 
         document.querySelectorAll('.value').forEach((value, index) => {
             value.classList.add('fade-in');
-            value.style.transitionDelay = `${index * 100}ms`;
+            value.style.transitionDelay = `${index * 120}ms`;
         });
     }
 
