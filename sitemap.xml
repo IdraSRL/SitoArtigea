@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    
     <!-- Homepage -->
     <url>
         <loc>https://www.artigea.com/</loc>
         <lastmod>2024-03-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.artigea.com/img/LogoCompleto.png</image:loc>
+            <image:title>Logo Artigea s.r.l. - Pulizie Professionali Pisa</image:title>
+        </image:image>
     </url>
     
-    <!-- Main sections -->
+    <!-- Main sections with anchors -->
     <url>
         <loc>https://www.artigea.com/#chi-siamo</loc>
         <lastmod>2024-03-15</lastmod>
@@ -24,10 +31,17 @@
     </url>
     
     <url>
-        <loc>https://www.artigea.com/#contatti</loc>
+        <loc>https://www.artigea.com/#lavora-con-noi</loc>
         <lastmod>2024-03-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/#contatti</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     
     <!-- Blog -->
@@ -35,49 +49,132 @@
         <loc>https://www.artigea.com/blog/</loc>
         <lastmod>2024-03-15</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
     
-    <!-- Blog Articles (placeholders) -->
+    <!-- Blog Articles -->
     <url>
         <loc>https://www.artigea.com/blog/pulizie-di-primavera-guida-completa.html</loc>
         <lastmod>2024-03-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://images.pexels.com/photos/4239013/pexels-photo-4239013.jpeg</image:loc>
+            <image:title>Pulizie di Primavera - Guida Completa</image:title>
+        </image:image>
     </url>
     
     <url>
         <loc>https://www.artigea.com/blog/prodotti-ecologici-per-pulizie.html</loc>
         <lastmod>2024-03-10</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.6</priority>
     </url>
     
     <url>
         <loc>https://www.artigea.com/blog/sanificazione-uffici-post-covid.html</loc>
         <lastmod>2024-03-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/blog/come-pulire-vetri-senza-aloni.html</loc>
+        <lastmod>2024-03-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/blog/pulizie-industriali-cosa-sapere.html</loc>
+        <lastmod>2024-02-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/blog/pulizie-anti-allergie.html</loc>
+        <lastmod>2024-02-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/blog/manutenzione-pavimenti-guida.html</loc>
+        <lastmod>2024-02-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Service-specific landing pages (future) -->
+    <url>
+        <loc>https://www.artigea.com/pulizie-civili-pisa.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/pulizie-industriali-pisa.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/sanificazioni-pisa.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/pulizie-vetri-pisa.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Location-specific pages (future) -->
+    <url>
+        <loc>https://www.artigea.com/pulizie-vicopisano.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/pulizie-cascina.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.artigea.com/pulizie-san-giuliano-terme.html</loc>
+        <lastmod>2024-03-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
     
     <!-- Legal pages -->
     <url>
         <loc>https://www.artigea.com/privacy-policy.html</loc>
-        <lastmod>2024-03-01</lastmod>
+        <lastmod>2024-03-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     
     <url>
         <loc>https://www.artigea.com/cookie-policy.html</loc>
-        <lastmod>2024-03-01</lastmod>
+        <lastmod>2024-03-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     
     <url>
         <loc>https://www.artigea.com/note-legali.html</loc>
-        <lastmod>2024-03-01</lastmod>
+        <lastmod>2024-03-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

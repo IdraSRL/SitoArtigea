@@ -99,6 +99,7 @@
                                     <th>Nome</th>
                                     <th>Finalità</th>
                                     <th>Durata</th>
+                                    <th>Tipo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -106,6 +107,13 @@
                                     <td>artigea-cookie-consent</td>
                                     <td>Memorizza il consenso dell'utente sui cookie</td>
                                     <td>1 anno</td>
+                                    <td>Tecnico</td>
+                                </tr>
+                                <tr>
+                                    <td>artigea-cookie-consent_timestamp</td>
+                                    <td>Memorizza la data del consenso per audit</td>
+                                    <td>1 anno</td>
+                                    <td>Tecnico</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -138,6 +146,7 @@
                                     <th>Nome</th>
                                     <th>Finalità</th>
                                     <th>Durata</th>
+                                    <th>Dominio</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -145,16 +154,25 @@
                                     <td>_ga</td>
                                     <td>Distingue gli utenti</td>
                                     <td>2 anni</td>
+                                    <td>.artigea.com</td>
                                 </tr>
                                 <tr>
                                     <td>_ga_*</td>
                                     <td>Mantiene lo stato della sessione</td>
                                     <td>2 anni</td>
+                                    <td>.artigea.com</td>
                                 </tr>
                                 <tr>
                                     <td>_gid</td>
                                     <td>Distingue gli utenti</td>
                                     <td>24 ore</td>
+                                    <td>.artigea.com</td>
+                                </tr>
+                                <tr>
+                                    <td>_gat_gtag_*</td>
+                                    <td>Limita la frequenza delle richieste</td>
+                                    <td>1 minuto</td>
+                                    <td>.artigea.com</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -197,6 +215,11 @@
                     <p>
                         Il consenso può essere revocato in qualsiasi momento attraverso le impostazioni 
                         del browser o contattando il titolare del trattamento.
+                    </p>
+                    <p>
+                        <strong>Consenso granulare:</strong> Il nostro sistema di gestione cookie permette 
+                        di fornire consenso separato per diverse categorie di cookie (tecnici, analytics, 
+                        marketing, preferenze).
                     </p>
                 </section>
 
@@ -247,6 +270,16 @@
                             https://tools.google.com/dlpage/gaoptout
                         </a>
                     </p>
+                    
+                    <h3>5.4 Gestione consenso su questo sito</h3>
+                    <p>
+                        È possibile modificare le preferenze sui cookie in qualsiasi momento:
+                    </p>
+                    <ul>
+                        <li>Cancellando i cookie dal browser (il banner riapparirà)</li>
+                        <li>Contattando il titolare del trattamento per richiedere la cancellazione</li>
+                        <li>Utilizzando il centro preferenze cookie (se implementato)</li>
+                    </ul>
                 </section>
 
                 <section class="legal-section">
@@ -283,10 +316,17 @@
                     <div class="contact-info">
                         <p>
                             <strong>Artigea s.r.l.</strong><br>
+                            <strong>Titolare del trattamento</strong><br>
                             Email: <a href="mailto:info@artigea.it">info@artigea.it</a><br>
+                            PEC: <a href="mailto:amministrazione@artigea.it">amministrazione@artigea.it</a><br>
                             Telefono: <a href="tel:+393462319824">+39 346 231 9824</a><br>
                             Sede legale: Via Polidori 14, 56032 Bientina (PI)<br>
                             Sede operativa: Via Amedeo Modigliani 32, 56010 Vicopisano (PI)
+                        </p>
+                        <p>
+                            <strong>Per esercitare i diritti GDPR:</strong><br>
+                            È possibile richiedere l'accesso, la rettifica, la cancellazione o la portabilità 
+                            dei dati relativi ai cookie scrivendo agli indirizzi sopra indicati.
                         </p>
                     </div>
                 </section>

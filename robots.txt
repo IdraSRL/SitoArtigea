@@ -8,21 +8,71 @@ Sitemap: https://www.artigea.com/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
+Disallow: /backup/
+Disallow: /_*
 
-# Crawl-delay for courtesy
+# Allow important directories
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /assets/
+Allow: /blog/
+
+# Crawl-delay for courtesy (1 second)
 Crawl-delay: 1
 
-# Specific rules for search engines
+# Specific rules for major search engines
 User-Agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
 User-Agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
-# Block access to specific file types
+User-Agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block access to specific file types that shouldn't be indexed
 User-Agent: *
 Disallow: /*.pdf$
 Disallow: /*.doc$
 Disallow: /*.docx$
 Disallow: /*.xls$
 Disallow: /*.xlsx$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.exe$
+
+# Block common bot patterns that aren't search engines
+User-Agent: AhrefsBot
+Disallow: /
+
+User-Agent: MJ12bot
+Disallow: /
+
+User-Agent: DotBot
+Disallow: /
+
+User-Agent: SemrushBot
+Disallow: /
+
+# Allow social media crawlers
+User-Agent: facebookexternalhit
+Allow: /
+
+User-Agent: Twitterbot
+Allow: /
+
+User-Agent: LinkedInBot
+Allow: /
+
+# Block aggressive crawlers
+User-Agent: *
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /search
+Disallow: /*?*
+Disallow: /*&*

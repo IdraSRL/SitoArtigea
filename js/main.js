@@ -13,6 +13,65 @@ class ArtigeaWebsite {
         this.setupScrollIndicator();
         this.setupBackToTop();
         this.setupLazyLoading();
+        this.setupFAQ();
+        this.setupServiceTracking();
+        this.setupPerformanceMonitoring();
+    }
+
+    setupServiceTracking() {
+        // Track service card interactions
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.addEventListener('mouseenter', () => {
+                if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+                    const serviceName = card.querySelector('.service-card__title')?.textContent || 'Unknown Service';
+                    window.cookieConsent.trackEvent('service_card_hover', {
+                        service_name: serviceName,
+                        card_position: index + 1
+                    });
+                }
+            });
+        });
+
+        // Track area item clicks
+        document.querySelectorAll('.area-item').forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+                    window.cookieConsent.trackEvent('service_area_click', {
+                        area_name: item.textContent.trim()
+                    });
+                }
+            });
+        });
+    }
+
+    setupPerformanceMonitoring() {
+        // Monitor Core Web Vitals if analytics consent given
+        if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+            // Largest Contentful Paint
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        window.cookieConsent.trackEvent('web_vital_lcp', {
+                            value: Math.round(entry.startTime),
+                            rating: entry.startTime < 2500 ? 'good' : entry.startTime < 4000 ? 'needs_improvement' : 'poor'
+                        });
+                    }
+                }
+            }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+            // First Input Delay
+            new PerformanceObserver((entryList) => {
+                for (const entry of entryList.getEntries()) {
+                    if (entry.entryType === 'first-input') {
+                        window.cookieConsent.trackEvent('web_vital_fid', {
+                            value: Math.round(entry.processingStart - entry.startTime),
+                            rating: entry.processingStart - entry.startTime < 100 ? 'good' : 
+                                   entry.processingStart - entry.startTime < 300 ? 'needs_improvement' : 'poor'
+                        });
+                    }
+                }
+            }).observe({ entryTypes: ['first-input'] });
+        }
     }
 
     setupEventListeners() {
@@ -29,6 +88,14 @@ class ArtigeaWebsite {
                         top: targetPosition,
                         behavior: 'smooth'
                     });
+                    
+                    // Track navigation usage
+                    if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+                        window.cookieConsent.trackEvent('smooth_scroll_navigation', {
+                            target_section: anchor.getAttribute('href').substring(1),
+                            source: 'navigation_menu'
+                        });
+                    }
                 }
             });
         });
@@ -113,6 +180,33 @@ class ArtigeaWebsite {
             e.preventDefault();
             this.handleFormspreeSubmit(form);
         });
+        
+        // Track form interactions
+        if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+            const formType = form.id === 'careers-form' ? 'careers' : 'contact';
+            
+            // Track form start (first field interaction)
+            let formStarted = false;
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    if (!formStarted) {
+                        formStarted = true;
+                        window.cookieConsent.trackEvent('form_start', {
+                            form_name: formType
+                        });
+                    }
+                });
+            });
+            
+            // Track form abandonment
+            window.addEventListener('beforeunload', () => {
+                if (formStarted && !form.dataset.submitted) {
+                    window.cookieConsent.trackEvent('form_abandon', {
+                        form_name: formType
+                    });
+                }
+            });
+        }
     }
 
     validateField(field) {
@@ -215,6 +309,7 @@ class ArtigeaWebsite {
             if (response.ok) {
                 this.showSuccessMessage(form);
                 form.reset();
+                form.dataset.submitted = 'true';
                 
                 // Track form submission if analytics available
                 if (window.cookieConsent && window.cookieConsent.hasConsent()) {
@@ -342,6 +437,38 @@ class ArtigeaWebsite {
         });
     }
 
+    setupFAQ() {
+        // Setup FAQ accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active', !isActive);
+                    
+                    // Track FAQ interaction if analytics enabled
+                    if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+                        window.cookieConsent.trackEvent('faq_interaction', {
+                            question: question.textContent.trim(),
+                            action: isActive ? 'close' : 'open'
+                        });
+                    }
+                });
+            }
+        });
+    }
+
     setupBackToTop() {
         // Create back to top button
         const backToTop = document.createElement('button');
@@ -365,6 +492,13 @@ class ArtigeaWebsite {
                 top: 0,
                 behavior: 'smooth'
             });
+            
+            // Track back to top usage
+            if (window.cookieConsent && window.cookieConsent.hasConsent('analytics')) {
+                window.cookieConsent.trackEvent('back_to_top_click', {
+                    scroll_position: window.pageYOffset
+                });
+            }
         });
     }
 
