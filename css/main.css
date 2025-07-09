@@ -429,22 +429,6 @@ a:focus {
     font-weight: 500;
 }
 
-/* Service Card Enhancements */
-.service-card__price {
-    background: var(--color-primary-subtle);
-    padding: var(--spacing-3) var(--spacing-4);
-    border-radius: 8px;
-    text-align: center;
-    margin: var(--spacing-4) 0;
-    border: 1px solid var(--color-border);
-}
-
-.service-card__price .price {
-    font-weight: 600;
-    color: var(--color-primary);
-    font-size: var(--font-size-lg);
-}
-
 /* Service Areas */
 .service-areas {
     margin-top: var(--spacing-16);
