@@ -241,6 +241,14 @@ class CookieConsent {
             });
         }
 
+        // Legacy accept cookies button (for backward compatibility)
+        const acceptBtn = document.getElementById('accept-cookies');
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', () => {
+                this.acceptAllCookies();
+            });
+        }
+
         // Setup tracking if consent already given
         if (this.consentTypes.analytics) {
             this.setupFormTracking();
