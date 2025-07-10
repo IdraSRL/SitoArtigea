@@ -81,6 +81,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    user-select: text; /* Abilita la selezione globalmente */
 }
 
 body {
@@ -91,6 +92,7 @@ body {
     background-color: var(--color-dark);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    user-select: text;
 }
 
 /* Typography */
@@ -924,6 +926,10 @@ a:focus {
     border-top: 1px solid var(--color-border);
     color: white;
     position: relative;
+    user-select: text; /* Abilita la selezione del testo */
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 .footer::before {
@@ -934,6 +940,7 @@ a:focus {
     right: 0;
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footergrid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23footergrid)"/></svg>');
+    pointer-events: none; /* Impedisce al background pattern di bloccare la selezione */
 }
 
 .footer__content {
@@ -950,6 +957,7 @@ a:focus {
 
 .footer__brand {
     max-width: 300px;
+    user-select: text;
 }
 
 .footer__logo {
@@ -961,11 +969,13 @@ a:focus {
 .footer__brand p {
     color: rgba(255, 255, 255, 0.8);
     font-size: var(--font-size-sm);
+    user-select: text;
 }
 
 .footer__links {
     display: grid;
     gap: var(--spacing-8);
+    user-select: text;
 }
 
 @media (min-width: 640px) {
@@ -978,20 +988,24 @@ a:focus {
     color: var(--color-secondary-light);
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-4);
+    user-select: text;
 }
 
 .footer__column ul {
     list-style: none;
+    user-select: text;
 }
 
 .footer__column li {
     margin-bottom: var(--spacing-2);
+    user-select: text;
 }
 
 .footer__column a {
     color: rgba(255, 255, 255, 0.8);
     font-size: var(--font-size-sm);
     transition: color var(--transition-fast);
+    user-select: text;
 }
 
 .footer__column a:hover {
@@ -1020,11 +1034,13 @@ a:focus {
     color: rgba(255, 255, 255, 0.8);
     font-size: var(--font-size-sm);
     margin: 0;
+    user-select: text;
 }
 
 .footer__info a {
     color: white;
     font-weight: 500;
+    user-select: text;
 }
 
 .gdpr-badge {
@@ -1037,6 +1053,7 @@ a:focus {
     font-size: var(--font-size-xs);
     font-weight: 600;
     border-radius: 6px;
+    user-select: text;
 }
 
 /* Cookie Banner */
@@ -1121,6 +1138,41 @@ a:focus {
 :focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
+}
+
+/* Ensure text selection is enabled everywhere */
+* {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+/* Disable text selection only for interactive elements */
+button,
+.btn,
+.nav__toggle,
+input[type="checkbox"],
+input[type="radio"],
+.service-card:hover,
+.blog-card:hover {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Re-enable text selection for text content inside interactive elements */
+button span,
+.btn span,
+.service-card__title,
+.service-card__description,
+.blog-card__title,
+.blog-card__excerpt {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
 }
 
 /* Animation Classes */
