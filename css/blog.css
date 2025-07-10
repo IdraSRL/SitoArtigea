@@ -51,6 +51,18 @@
     object-fit: cover;
 }
 
+.blog-featured-image {
+    object-fit: contain !important;
+    background: white;
+    padding: 2rem;
+}
+
+.blog-card__image {
+    object-fit: contain;
+    background: white;
+    padding: 1rem;
+}
+
 @media (min-width: 1024px) {
     .featured-card__image img {
         height: 100%;
@@ -321,6 +333,12 @@
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+
+.article-featured-image {
+    object-fit: contain !important;
+    background: white;
+    padding: 2rem;
 }
 
 @media (min-width: 768px) {

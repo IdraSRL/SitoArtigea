@@ -25,6 +25,24 @@
     --color-secondary-dark: #1e7a9b;  /* Blu più scuro */
     --color-secondary-subtle: #e8f4f8; /* Blu molto chiaro per sfondi */
     
+    /* Professional Badge Colors */
+    --color-badge-gdpr: var(--color-success);
+    --color-badge-iso: var(--color-secondary);
+    --color-badge-haccp: var(--color-primary);
+    --color-badge-covid: var(--color-accent);
+    --color-badge-eco: #10b981;
+    --color-badge-certified: #6366f1;
+    --color-badge-insurance: #8b5cf6;
+    
+    /* Legal Page Colors */
+    --color-legal-bg: var(--color-surface);
+    --color-legal-border: var(--color-border);
+    --color-legal-title: var(--color-primary);
+    --color-legal-subtitle: var(--color-secondary);
+    --color-legal-text: var(--color-text-muted);
+    --color-legal-highlight: var(--color-text);
+    --color-legal-info-bg: var(--color-dark);
+    
     /* Neutral Colors - Palette Equilibrata */
     --color-dark: #f1f3f4;           /* Grigio più scuro per sfondo principale */
     --color-dark-lighter: #e8eaed;   /* Grigio medio per sezioni alternate */
@@ -1087,43 +1105,209 @@ a:focus {
 }
 
 .professional-badge--gdpr {
-    background: var(--color-success);
+    background: var(--color-badge-gdpr);
     color: white;
 }
 
 .professional-badge--iso {
-    background: var(--color-secondary);
+    background: var(--color-badge-iso);
     color: white;
 }
 
 .professional-badge--haccp {
-    background: var(--color-primary);
+    background: var(--color-badge-haccp);
     color: white;
 }
 
 .professional-badge--covid {
-    background: var(--color-accent);
+    background: var(--color-badge-covid);
     color: white;
 }
 
 .professional-badge--eco {
-    background: #10b981;
+    background: var(--color-badge-eco);
     color: white;
 }
 
 .professional-badge--certified {
-    background: #6366f1;
+    background: var(--color-badge-certified);
     color: white;
 }
 
 .professional-badge--insurance {
-    background: #8b5cf6;
+    background: var(--color-badge-insurance);
     color: white;
 }
 
 .badge-icon {
     font-size: var(--font-size-sm);
 }
+
+/* Legal Pages Styles */
+.legal-page {
+    padding: 120px 0 var(--spacing-20);
+    min-height: 100vh;
+}
+
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-legal-bg);
+    padding: var(--spacing-12);
+    border-radius: 16px;
+    border: 1px solid var(--color-legal-border);
+}
+
+.legal-content h1 {
+    color: var(--color-legal-title);
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-2);
+    text-align: center;
+}
+
+.last-updated {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-12);
+    font-style: italic;
+}
+
+.legal-section {
+    margin-bottom: var(--spacing-10);
+}
+
+.legal-section h2 {
+    color: var(--color-legal-subtitle);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--color-legal-border);
+    padding-bottom: var(--spacing-2);
+}
+
+.legal-section h3 {
+    color: var(--color-legal-highlight);
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-3);
+}
+
+.legal-section h4 {
+    color: var(--color-legal-title);
+    font-size: var(--font-size-base);
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-3);
+}
+
+.legal-section p {
+    color: var(--color-legal-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-4);
+}
+
+.legal-section ul {
+    margin-bottom: var(--spacing-4);
+    padding-left: var(--spacing-6);
+}
+
+.legal-section li {
+    color: var(--color-legal-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-2);
+}
+
+.legal-section li strong {
+    color: var(--color-legal-highlight);
+}
+
+.company-info,
+.contact-info {
+    background: var(--color-legal-info-bg);
+    padding: var(--spacing-6);
+    border-radius: 12px;
+    border: 1px solid var(--color-legal-border);
+    margin: var(--spacing-4) 0;
+}
+
+.company-info p,
+.contact-info p {
+    margin-bottom: var(--spacing-2);
+    color: var(--color-legal-text);
+    line-height: 1.6;
+}
+
+.company-info p:last-child,
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.company-info strong {
+    color: var(--color-legal-highlight);
+    display: inline-block;
+    min-width: 120px;
+}
+
+.legal-content a {
+    color: var(--color-legal-title);
+    font-weight: 500;
+}
+
+.legal-content a:hover {
+    color: var(--color-legal-subtitle);
+}
+
+/* Cookie Table Styles */
+.cookie-table {
+    background: var(--color-legal-info-bg);
+    padding: var(--spacing-6);
+    border-radius: 12px;
+    border: 1px solid var(--color-legal-border);
+    margin: var(--spacing-6) 0;
+    overflow-x: auto;
+}
+
+.cookie-table h4 {
+    color: var(--color-legal-title);
+    margin-bottom: var(--spacing-4);
+}
+
+.cookie-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.cookie-table th {
+    background: var(--color-legal-bg);
+    color: var(--color-legal-highlight);
+    padding: var(--spacing-3);
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid var(--color-legal-border);
+}
+
+.cookie-table td {
+    color: var(--color-legal-text);
+    padding: var(--spacing-3);
+    border: 1px solid var(--color-legal-border);
+    vertical-align: top;
+}
+
+.cookie-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 767px) {
+    .cookie-table {
+        font-size: var(--font-size-xs);
+    }
+    
+    .cookie-table th,
+    .cookie-table td {
+        padding: var(--spacing-2);
+    }
+}
+
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;
