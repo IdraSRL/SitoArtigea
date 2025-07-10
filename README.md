@@ -1,25 +1,24 @@
 # Sito Web Artigea s.r.l.
 
-Sito web ottimizzato per Artigea s.r.l., azienda specializzata in servizi di pulizia professionale a Pisa e provincia.
+Sito web statico per Artigea s.r.l., azienda specializzata in servizi di pulizia professionale a Pisa e provincia.
 
 ## 🚀 Caratteristiche
 
-- **Design moderno e responsive** con layout ottimizzato per tutti i dispositivi
-- **SEO avanzato** con structured data, meta tags completi e ottimizzazioni AI
-- **Performance elevate** con preload, lazy loading e ottimizzazioni Core Web Vitals
-- **GDPR compliance** completo con cookie consent granulare
-- **Accessibilità WCAG 2.1 AA** con supporto screen reader e navigazione da tastiera
-- **Sistema di blog** con filtri interattivi e categorizzazione
-- **Ottimizzazione AI** con markup semantico e structured data avanzati
+- **Design moderno e responsive** con tema scuro professionale
+- **SEO ottimizzato** per "pulizie Pisa" e keywords correlate
+- **Performance elevate** con lazy loading e ottimizzazioni CSS/JS
+- **GDPR compliance** con cookie consent e privacy policy
+- **Accessibilità** seguendo le linee guida WCAG
+- **Sistema di blog** integrato per content marketing
 
 ## 🎨 Design System
 
 ### Colori
-- **Primario**: #a14e97 (Viola aziendale Artigea)
-- **Secondario**: #00a0dc (Blu aziendale Artigea)
-- **Accent**: #f59e0b (Arancione energia per CTA)
-- **Sfondo**: #f1f3f4 (Grigio chiaro professionale)
-- **Testo**: #2d3748 (Grigio scuro per leggibilità)
+- **Primario**: #a14e97 (Viola aziendale)
+- **Secondario**: #2596be (Blu complementare)
+- **Accent**: #f97316 (Arancione per CTA)
+- **Sfondo**: #1a1a1a (Nero professionale)
+- **Testo**: #f0f0f0 (Bianco per contrasto)
 
 ### Typography
 - **Font famiglia**: Inter, system-ui, sans-serif
@@ -27,14 +26,14 @@ Sito web ottimizzato per Artigea s.r.l., azienda specializzata in servizi di pul
 - **Pesi**: 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
 
 ### Spaziatura
-Sistema a 8px con variabili CSS personalizzate per consistenza e scalabilità.
+Sistema a 8px con variabili CSS personalizzate per consistenza.
 
 ## 📁 Struttura del Progetto
 
 ```
 /
 ├── index.html              # Homepage principale
-├── blog/
+├── ./blog/
 │   ├── template.html       # Template per articoli blog
 │   └── index.html          # Pagina indice blog (da creare)
 ├── css/
@@ -43,18 +42,16 @@ Sistema a 8px con variabili CSS personalizzate per consistenza e scalabilità.
 │   └── blog.css          # Stili specifici per il blog
 ├── js/
 │   ├── main.js           # Funzionalità principali
-│   ├── cookie-consent.js # Gestione cookie e GDPR
-│   └── blog-filters.js   # Sistema filtri blog
+│   └── cookie-consent.js # Gestione cookie e GDPR
 ├── assets/
-│   ├── site.webmanifest         # Manifest PWA
+│   ├── logo-artigea.svg         # Logo aziendale
 │   ├── favicon-*.png            # Favicon varie dimensioni
-│   ├── PulizeCivili.webp        # Immagini servizi ottimizzate
-│   ├── PulizieIndustriali.webp  # Formato WebP per performance
-│   ├── PulizieSanificazioni.webp
-│   └── PulizieVetri.webp
-├── img/
-│   ├── logo.svg                 # Logo SVG ottimizzato
-│   └── LogoCompleto.png         # Logo completo
+│   ├── hero-cleaning.jpg        # Immagine hero
+│   ├── team-placeholder.jpg     # Foto team
+│   ├── servizi/                 # Immagini servizi
+│   ├── ./blog/                    # Immagini articoli blog
+│   ├── icons/                   # Icone servizi
+│   └── before-after/            # Foto prima/dopo
 ├── privacy-policy.html     # Privacy policy GDPR
 ├── cookie-policy.html      # Cookie policy
 ├── note-legali.html       # Note legali
@@ -63,218 +60,103 @@ Sistema a 8px con variabili CSS personalizzate per consistenza e scalabilità.
 └── README.md             # Questo file
 ```
 
-## 🔍 Ottimizzazioni SEO e AI
-
-### Structured Data Implementati
-- **Organization Schema**: Dati aziendali completi
-- **LocalBusiness Schema**: Informazioni attività locale
-- **Service Schema**: Catalogo servizi strutturato
-- **FAQ Schema**: Domande frequenti marcate
-- **Article Schema**: Articoli blog ottimizzati
-- **BreadcrumbList Schema**: Navigazione strutturata
-
-### Meta Tags Avanzati
-- **Open Graph** completo per social media
-- **Twitter Cards** ottimizzate
-- **Geo Tags** per SEO locale
-- **Canonical URLs** per evitare contenuti duplicati
-- **Robots meta** per controllo indicizzazione
-
-### Performance Ottimizzazioni
-- **Preconnect** per risorse esterne
-- **DNS Prefetch** per domini terzi
-- **Preload** per risorse critiche
-- **Lazy Loading** per immagini
-- **WebP** per immagini ottimizzate
-- **Critical CSS** inline
-
-### Accessibilità WCAG 2.1 AA
-- **Skip Links** per navigazione rapida
-- **ARIA Labels** completi
-- **Semantic HTML5** strutturato
-- **Focus Management** ottimizzato
-- **Screen Reader** supporto completo
-- **Keyboard Navigation** funzionale
-- **Color Contrast** conforme
-
 ## 🔧 Come Aggiungere Contenuti
 
 ### Nuovo Articolo Blog
 
 1. **Usa il template esistente**:
-   - Copia `blog/template.html`
-   - Rinomina: `blog/nome-articolo-seo-friendly.html`
+   - Copia `./blog/template.html` e rinominalo con il nome dell'articolo
+   - Esempio: `./blog/come-pulire-vetri-senza-aloni.html`
 
 2. **Personalizza i metadati**:
-   - Title: max 60 caratteri, include keyword principale
-   - Description: 150-160 caratteri, call-to-action
-   - Keywords: 5-10 parole chiave rilevanti
-   - JSON-LD Schema: dati articolo completi
-   - Open Graph: immagini 1200x630px
+   - Aggiorna title, description, keywords nel `<head>`
+   - Modifica il JSON-LD schema con i dati dell'articolo
+   - Aggiorna breadcrumb e meta dell'articolo
 
 3. **Scrivi il contenuto**:
-   - Struttura H1 > H2 > H3 gerarchica
-   - Paragrafi max 3-4 righe
-   - Liste puntate per leggibilità
-   - Blockquote per citazioni importanti
-   - Alt text descrittivi per immagini
+   - Sostituisci il contenuto nella sezione `.article-body`
+   - Usa la struttura HTML esistente come guida
+   - Mantieni la formattazione con h2, h3, p, ul, blockquote
 
 4. **Aggiorna i link**:
-   - Aggiungi in `blog/index.html`
-   - Categoria corretta per filtri
-   - Data 2025 per coerenza
+   - Aggiungi il link nell'indice del blog (`./blog/index.html`)
+   - Aggiorna la homepage se necessario
    - Aggiorna `sitemap.xml`
 
-### Ottimizzazione Immagini
-- **Formato**: WebP per web, PNG per loghi
-- **Dimensioni**: max 1920px larghezza
-- **Compressione**: 80-85% qualità
-- **Alt Text**: descrittivo e keyword-friendly
-- **Lazy Loading**: per tutte le immagini non critiche
 
 ### Aggiornare Servizi
 
-1. **Contenuto**: 
-   - Descrizioni orientate ai benefici
-   - Keywords naturali integrate
-   - Call-to-action chiari
-
-2. **Schema Markup**:
-   - Service Schema per ogni servizio
-   - Offer Schema per preventivi
-   - Review Schema se disponibili
-
-3. **Immagini**:
-   - WebP ottimizzate
-   - Alt text con keywords
-   - Dimensioni responsive
+Modifica la sezione servizi in `index.html`:
+- Aggiorna testi e descrizioni
+- Sostituisci immagini in `assets/servizi/`
+- Aggiorna icone in `assets/icons/`
 
 ### Modificare Contatti
 
-**File da aggiornare**:
-- `index.html`: sezione contatti e schema
-- `privacy-policy.html`: dati titolare
-- `cookie-policy.html`: informazioni azienda
-- `note-legali.html`: dati societari
-- `assets/site.webmanifest`: informazioni app
+Aggiorna le informazioni aziendali in:
+- `index.html` (sezione contatti)
+- `privacy-policy.html`
+- `cookie-policy.html`
+- `note-legali.html`
+- JSON-LD schema nella homepage
 
 ## 🚀 Deploy e Manutenzione
 
 ### Performance
-- **Core Web Vitals**: LCP < 2.5s, FID < 100ms, CLS < 0.1
-- **Lighthouse Score**: target 95+ per tutte le metriche
-- **WebP Images**: conversione automatica
-- **CSS/JS Minification**: build process ottimizzato
-- **CDN**: considera Cloudflare per performance globali
+- **Comprimi immagini** in formato WebP quando possibile
+- **Minimizza CSS/JS** prima del deploy in produzione
+- **Testa velocità** con Google PageSpeed Insights
 
 ### SEO
-- **Google Search Console**: monitoraggio errori e performance
-- **Bing Webmaster Tools**: indicizzazione Microsoft
-- **Schema Validator**: test structured data
-- **Rich Results Test**: verifica snippet arricchiti
-- **Mobile-Friendly Test**: compatibilità mobile
-- **Page Speed Insights**: ottimizzazioni performance
+- **Aggiorna sitemap.xml** dopo ogni modifica
+- **Verifica meta tags** per ogni pagina
+- **Controlla structured data** con Google Rich Results Test
+- **Monitora posizionamento** per "pulizie Pisa" e varianti
 
 ### Analytics
-- **GA4 Setup**: sostituisci `GA_MEASUREMENT_ID`
-- **Enhanced Ecommerce**: per tracking conversioni
-- **Custom Events**: form submissions, phone clicks
-- **Goal Tracking**: preventivi, contatti, chiamate
-- **Audience Segments**: comportamento utenti
-
-### Local SEO
-- **Google My Business**: profilo completo e aggiornato
-- **Recensioni**: strategia raccolta feedback
-- **NAP Consistency**: nome, indirizzo, telefono uniformi
-- **Local Citations**: directory locali e settoriali
-- **Geo-targeting**: contenuti specifici per zona
+- **Configura Google Analytics 4** sostituendo `GA_MEASUREMENT_ID`
+- **Imposta Google Search Console** per monitoraggio SEO
+- **Configura Google My Business** per SEO locale
 
 ### GDPR Compliance
-- **Privacy Policy**: revisione annuale obbligatoria
-- **Cookie Consent**: granulare per tipologia
-- **Data Retention**: politiche conservazione dati
-- **User Rights**: procedure per richieste GDPR
-- **Audit Trail**: log delle attività di trattamento
+- **Rivedi privacy policy** annualmente
+- **Aggiorna cookie policy** se aggiungi nuovi servizi
+- **Testa cookie consent** su tutti i dispositivi
 
 ## 🔒 Sicurezza
 
 - **HTTPS obbligatorio** per tutti gli ambienti
-- **Security Headers**: CSP, HSTS, X-Frame-Options
-- **Form Protection**: CSRF tokens, rate limiting
-- **Input Validation**: sanitizzazione lato client/server
-- **SSL Certificate**: certificato valido e aggiornato
-- **Backup Strategy**: backup automatici giornalieri
+- **Headers di sicurezza** configurati nel server web
+- **Form validation** lato client e server
+- **Sanitizzazione input** per prevenire XSS
 
 ## 🎯 SEO Local
 
 ### Keywords Target
-- **Primarie**: "pulizie Pisa", "pulizie professionali Pisa"
-- **Secondarie**: "sanificazioni Pisa", "pulizie industriali Pisa", "pulizie civili Pisa"
-- **Long-tail**: "servizi pulizie casa Pisa", "impresa pulizie uffici Pisa", "pulizie condomini Pisa"
-- **Geo-specifiche**: "pulizie Vicopisano", "pulizie Cascina", "pulizie San Giuliano Terme"
+- **Primaria**: "pulizie Pisa"
+- **Secondarie**: "pulizie professionali Pisa", "sanificazioni Pisa", "pulizie industriali Pisa"
+- **Long-tail**: "servizi pulizie casa Pisa", "impresa pulizie uffici Pisa"
 
 ### Google My Business
-- **Profilo Completo**: orari, servizi, foto, descrizione
-- **Recensioni Strategy**: follow-up clienti, risposta tempestiva
-- **Google Posts**: aggiornamenti settimanali su servizi/offerte
-- **Q&A Management**: risposte proattive alle domande
-- **Insights Monitoring**: analisi performance e ricerche
-
-### Competitor Analysis
-- **Keyword Gap**: opportunità non coperte
-- **Content Strategy**: analisi contenuti competitor
-- **Backlink Profile**: opportunità link building
-- **Local Pack**: posizionamento vs competitor
-- **Review Monitoring**: sentiment analysis settore
+- **Mantieni aggiornate** le informazioni aziendali
+- **Raccogli recensioni** dai clienti soddisfatti
+- **Pubblica foto** dei lavori svolti (con permesso clienti)
+- **Rispondi** a tutte le recensioni
 
 ## 📊 Monitoraggio
 
 ### Metriche da Monitorare
-- **Organic Traffic**: crescita traffico qualificato
-- **Keyword Rankings**: posizioni keywords target
-- **Local Pack**: visibilità ricerche locali
-- **Conversion Rate**: form submissions, chiamate
-- **Core Web Vitals**: LCP, FID, CLS
-- **User Experience**: bounce rate, session duration
-- **Mobile Performance**: usabilità dispositivi mobili
+- **Posizionamento organico** per keywords target
+- **Traffico qualificato** da ricerca locale
+- **Conversioni** (richieste preventivo, chiamate)
+- **Core Web Vitals** per performance tecnica
 
 ### Strumenti Consigliati
-- **Analytics**: Google Analytics 4, Hotjar
-- **SEO**: Google Search Console, SEMrush, Ahrefs
-- **Local**: Google My Business, BrightLocal
-- **Technical**: PageSpeed Insights, GTmetrix
-- **Validation**: Schema Validator, W3C Validator
-- **Monitoring**: Google Alerts, Mention
-
-### KPI Dashboard
-- **Traffic**: sessioni organiche, utenti unici
-- **Rankings**: posizioni top 10 keywords
-- **Conversions**: lead qualificati, ROI
-- **Technical**: uptime, velocità caricamento
-- **Local**: visualizzazioni GMB, azioni utente
-
-## 🤖 Ottimizzazione AI
-
-### Structured Data Avanzati
-- **Knowledge Graph**: entità aziendali strutturate
-- **Rich Snippets**: FAQ, recensioni, eventi
-- **Voice Search**: ottimizzazione query vocali
-- **Featured Snippets**: contenuti posizione zero
-- **Local Pack**: informazioni business locali
-
-### Content AI-Friendly
-- **Semantic HTML**: markup significativo
-- **Entity Recognition**: persone, luoghi, organizzazioni
-- **Topic Clusters**: contenuti correlati linkati
-- **Intent Matching**: contenuti per intent utente
-- **Natural Language**: scrittura conversazionale
-
-### Technical AI Optimization
-- **JSON-LD**: structured data machine-readable
-- **Microdata**: markup inline semantico
-- **RDFa**: attributi semantici HTML
-- **Open Graph**: social media optimization
-- **Twitter Cards**: rich media Twitter
+- Google Analytics 4
+- Google Search Console
+- Google My Business Insights
+- Schema.org Validator
+- W3C Markup Validator
 
 ## 📞 Supporto
 
@@ -285,17 +167,8 @@ Per assistenza tecnica o modifiche al sito:
 📞 +39 346 231 9824  
 📍 Pisa (PI), Toscana
 
-**Supporto Tecnico**:
-- **Hosting**: configurazione server e dominio
-- **SSL**: certificati sicurezza e rinnovi
-- **Backup**: strategie backup e recovery
-- **Updates**: aggiornamenti sicurezza e funzionalità
-- **Monitoring**: uptime e performance 24/7
-
 ---
 
-**Versione**: 2.0  
-**Ultimo aggiornamento**: Gennaio 2025  
-**Compatibilità browser**: Chrome 95+, Firefox 95+, Safari 15+, Edge 95+  
-**Performance Target**: Lighthouse 95+, Core Web Vitals Green  
-**SEO Compliance**: Schema.org, WCAG 2.1 AA, GDPR
+**Versione**: 1.0  
+**Ultimo aggiornamento**: Marzo 2024  
+**Compatibilità browser**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+

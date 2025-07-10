@@ -16,7 +16,7 @@ Allow: /css/
 Allow: /js/
 Allow: /img/
 Allow: /assets/
-Allow: /blog/
+Allow: /./blog/
 
 # Crawl-delay for courtesy (1 second)
 Crawl-delay: 1
