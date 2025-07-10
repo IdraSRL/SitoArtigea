@@ -128,6 +128,7 @@
                         </p>
                         <div class="featured-card__meta">
                             <time class="featured-card__date" datetime="2024-03-15">15 Marzo 2024</time>
+                            <time class="featured-card__date" datetime="2025-03-15">15 Marzo 2025</time>
                             <span class="featured-card__reading-time">8 min di lettura</span>
                         </div>
                         <a href="pulizie-di-primavera-guida-completa.html" class="btn btn--primary">Leggi l'articolo</a>
@@ -141,29 +142,41 @@
             <div class="container">
                 <h2 class="section__title">Categorie</h2>
                 <div class="categories-grid">
-                    <div class="category-card">
+                    <div class="category-card" data-category="guide">
                         <div class="category-card__icon">🏠</div>
                         <h3 class="category-card__title">Guide Casa</h3>
                         <p class="category-card__description">Consigli per la pulizia domestica</p>
                         <span class="category-card__count">5 articoli</span>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card" data-category="business">
                         <div class="category-card__icon">🏢</div>
                         <h3 class="category-card__title">Business</h3>
                         <p class="category-card__description">Pulizie per uffici e aziende</p>
                         <span class="category-card__count">3 articoli</span>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card" data-category="ambiente">
                         <div class="category-card__icon">🌱</div>
                         <h3 class="category-card__title">Ambiente</h3>
                         <p class="category-card__description">Prodotti eco-sostenibili</p>
                         <span class="category-card__count">4 articoli</span>
                     </div>
-                    <div class="category-card">
+                    <div class="category-card" data-category="sanificazione">
                         <div class="category-card__icon">🦠</div>
                         <h3 class="category-card__title">Sanificazione</h3>
                         <p class="category-card__description">Igiene e disinfezione</p>
                         <span class="category-card__count">6 articoli</span>
+                    </div>
+                    <div class="category-card" data-category="salute">
+                        <div class="category-card__icon">💊</div>
+                        <h3 class="category-card__title">Salute</h3>
+                        <p class="category-card__description">Pulizie per la salute</p>
+                        <span class="category-card__count">2 articoli</span>
+                    </div>
+                    <div class="category-card category-card--all active" data-category="all">
+                        <div class="category-card__icon">📋</div>
+                        <h3 class="category-card__title">Tutti gli Articoli</h3>
+                        <p class="category-card__description">Visualizza tutti i contenuti</p>
+                        <span class="category-card__count">20 articoli</span>
                     </div>
                 </div>
             </div>
@@ -173,8 +186,15 @@
         <section class="recent-articles">
             <div class="container">
                 <h2 class="section__title">Articoli Recenti</h2>
+                
+                <!-- Filter Status -->
+                <div class="filter-status" id="filter-status" style="display: none;">
+                    <p>Mostrando articoli per: <span class="filter-category"></span></p>
+                    <button class="btn btn--outline btn--small" onclick="clearFilter()">Mostra tutti</button>
+                </div>
+                
                 <div class="blog__grid">
-                    <article class="blog-card">
+                    <article class="blog-card" data-category="ambiente">
                         <img src=".././img/logo.svg" alt="Artigea s.r.l. - Prodotti ecologici pulizie" class="blog-card__image" loading="lazy">
                         <div class="blog-card__content">
                             <span class="blog-card__category">Ambiente</span>
@@ -187,11 +207,11 @@
                                 L'importanza di scegliere prodotti eco-compatibili per la pulizia della casa e degli uffici. 
                                 Benefici per l'ambiente e la salute.
                             </p>
-                            <time class="blog-card__date" datetime="2024-03-10">10 Marzo 2024</time>
+                            <time class="blog-card__date" datetime="2025-03-10">10 Marzo 2025</time>
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card" data-category="business">
                         <img src=".././img/logo.svg" alt="Artigea s.r.l. - Sanificazione uffici" class="blog-card__image" loading="lazy">
                         <div class="blog-card__content">
                             <span class="blog-card__category">Business</span>
@@ -204,11 +224,11 @@
                                 I nuovi standard di sanificazione per garantire ambienti di lavoro sicuri e salubri. 
                                 Protocolli e prodotti certificati.
                             </p>
-                            <time class="blog-card__date" datetime="2024-03-05">5 Marzo 2024</time>
+                            <time class="blog-card__date" datetime="2025-03-05">5 Marzo 2025</time>
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card" data-category="guide">
                         <img src=".././img/logo.svg" alt="Artigea s.r.l. - Pulizia vetri professionali" class="blog-card__image" loading="lazy">
                         <div class="blog-card__content">
                             <span class="blog-card__category">Guide</span>
@@ -221,11 +241,11 @@
                                 Tecniche professionali per ottenere vetri perfettamente puliti e trasparenti. 
                                 Strumenti, prodotti e metodi testati.
                             </p>
-                            <time class="blog-card__date" datetime="2024-03-01">1 Marzo 2024</time>
+                            <time class="blog-card__date" datetime="2025-03-01">1 Marzo 2025</time>
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card" data-category="business">
                         <img src=".././img/logo.svg" alt="Artigea s.r.l. - Pulizie industriali" class="blog-card__image" loading="lazy">
                         <div class="blog-card__content">
                             <span class="blog-card__category">Business</span>
@@ -238,11 +258,11 @@
                                 Differenze tra pulizie civili e industriali, attrezzature specializzate e 
                                 normative di sicurezza per ambienti di lavoro.
                             </p>
-                            <time class="blog-card__date" datetime="2024-02-25">25 Febbraio 2024</time>
+                            <time class="blog-card__date" datetime="2025-02-25">25 Febbraio 2025</time>
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card" data-category="salute">
                         <img src=".././img/logo.svg" alt="Artigea s.r.l. - Allergie e pulizie" class="blog-card__image" loading="lazy">
                         <div class="blog-card__content">
                             <span class="blog-card__category">Salute</span>
@@ -255,11 +275,11 @@
                                 Come ridurre gli allergeni in casa attraverso tecniche di pulizia specifiche. 
                                 Prodotti ipoallergenici e frequenze consigliate.
                             </p>
-                            <time class="blog-card__date" datetime="2024-02-20">20 Febbraio 2024</time>
+                            <time class="blog-card__date" datetime="2025-02-20">20 Febbraio 2025</time>
                         </div>
                     </article>
 
-                    <article class="blog-card">
+                    <article class="blog-card" data-category="guide">
                         <img src=".././img/logo.svg" alt="Artigea s.r.l. - Manutenzione pavimenti" class="blog-card__image" loading="lazy">
                         <div class="blog-card__content">
                             <span class="blog-card__category">Guide</span>
@@ -272,7 +292,24 @@
                                 Parquet, ceramica, marmo, laminato: ogni pavimento ha le sue esigenze. 
                                 Scopri come mantenerli sempre perfetti.
                             </p>
-                            <time class="blog-card__date" datetime="2024-02-15">15 Febbraio 2024</time>
+                            <time class="blog-card__date" datetime="2025-02-15">15 Febbraio 2025</time>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="sanificazione">
+                        <img src=".././img/logo.svg" alt="Artigea s.r.l. - Sanificazione ambienti" class="blog-card__image" loading="lazy">
+                        <div class="blog-card__content">
+                            <span class="blog-card__category">Sanificazione</span>
+                            <h3 class="blog-card__title">
+                                <a href="sanificazione-ambienti-professionali.html">
+                                    Sanificazione Ambienti: Protocolli Professionali
+                                </a>
+                            </h3>
+                            <p class="blog-card__excerpt">
+                                Tecniche avanzate di sanificazione per eliminare virus, batteri e agenti patogeni. 
+                                Protocolli certificati per la massima sicurezza.
+                            </p>
+                            <time class="blog-card__date" datetime="2025-02-10">10 Febbraio 2025</time>
                         </div>
                     </article>
                 </div>
@@ -396,5 +433,6 @@
     <!-- Scripts -->
     <script src="../js/main.js"></script>
     <script src="../js/cookie-consent.js"></script>
+    <script src="../js/blog-filters.js"></script>
 </body>
 </html>
